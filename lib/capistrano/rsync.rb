@@ -71,6 +71,13 @@ namespace :rsync do
 
       checkout = %W[git reset --hard origin/#{fetch(:branch)}]
       Kernel.system *checkout
+
+      submodules_init = %W[git submodule init]
+      submodules_sync = %W[git submodule sync]
+      submodules_update = %W[git submodule update]
+      Kernel.system *submodules_init
+      Kernel.system *submodules_sync
+      Kernel.system *submodules_update
     end
   end
 
