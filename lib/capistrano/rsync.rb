@@ -6,7 +6,7 @@ require File.expand_path("../rsync/version", __FILE__)
 # be public for extending and hooking, please let me know!
 
 set :rsync_options, []
-set :rsync_copy, "rsync --archive --acls --xattrs"
+set :rsync_copy, "rsync --archive"
 
 # Stage is used on your local machine for rsyncing from.
 set :rsync_stage, "tmp/deploy"
